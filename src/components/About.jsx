@@ -1,46 +1,24 @@
-import React from 'react';
+import React from 'react'
+import Skills from './Skills'
 
-const About = () => {
+export default function About(){
   return (
-    <section id="about" className="about">
-      <div className="container">
-        <h2 className="section-title">About Me</h2>
-        <div className="about-content">
-          <div className="about-image">
-            <img src="/assets/portrait-2.jpg" alt="Kushan - About" />
-          </div>
-          <div className="about-text">
-            <h3>Hello! I'm Kushan</h3>
-            <p>
-              I'm a passionate Full Stack Developer with a keen eye for design and a love for creating 
-              innovative web applications. With expertise in modern web technologies, I transform ideas 
-              into elegant, user-friendly solutions.
-            </p>
-            <p>
-              My journey in web development started with a curiosity about how websites work, and has 
-              evolved into a career where I get to solve complex problems and build amazing digital 
-              experiences every day.
-            </p>
-            <p>
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source 
-              projects, or enjoying a good book on software architecture.
-            </p>
-            <div className="about-info">
-              <div className="info-item">
-                <strong>Email:</strong> <span>kushan@example.com</span>
-              </div>
-              <div className="info-item">
-                <strong>Location:</strong> <span>Your City, Country</span>
-              </div>
-              <div className="info-item">
-                <strong>Resume:</strong> <a href="/assets/resume.pdf" download>Download CV</a>
-              </div>
-            </div>
-          </div>
+    <section id="about" className="about container">
+      <h2>About Me</h2>
+      <div className="about-grid">
+        <div className="about-photo">
+          <img src="/assets/portrait-2.jpg" alt="Kushan"/>
+        </div>
+        <div className="about-copy">
+          <p>
+            I am a passionate Fullstack developer, UI/UX designer and artist. I build web
+            experiences focusing on clean code, modern interfaces and thoughtful interactions.
+          </p>
+          <a className="btn primary" href="/assets/resume.pdf" target="_blank" rel="noreferrer">Download CV</a>
         </div>
       </div>
-    </section>
-  );
-};
 
-export default About;
+      <Skills />
+    </section>
+  )
+}

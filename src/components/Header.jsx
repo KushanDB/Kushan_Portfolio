@@ -1,46 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
-  };
-
+function Logo(){
+  // Simple textual logo using Qasira font
   return (
-    <header className="header">
-      <div className="container">
-        <nav className="navbar">
-          <div className="logo">
-            <h2>Kushan</h2>
-          </div>
-          
-          <button className="menu-toggle" onClick={toggleMenu}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+    <Link to="/" className="logo">
+      <span className="logo-symbol">KJ</span>
+      <span className="logo-text">Kushan Jayathunga</span>
+    </Link>
+  )
+}
 
-          <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-            <li><a onClick={() => scrollToSection('hero')}>Home</a></li>
-            <li><a onClick={() => scrollToSection('about')}>About</a></li>
-            <li><a onClick={() => scrollToSection('skills')}>Skills</a></li>
-            <li><a onClick={() => scrollToSection('projects')}>Projects</a></li>
-            <li><a onClick={() => scrollToSection('education')}>Education</a></li>
-            <li><a onClick={() => scrollToSection('contact')}>Contact</a></li>
-          </ul>
+export default function Header(){
+  return (
+    <header className="site-header">
+      <div className="container header-inner">
+        <Logo />
+        <nav className="nav">
+          <NavLink to="/" end>Home</NavLink>
+          <NavLink to="/projects">Projects</NavLink>
+          <NavLink to="/education">Education</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </nav>
       </div>
     </header>
-  );
-};
-
-export default Header;
+  )
+}

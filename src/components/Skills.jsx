@@ -1,66 +1,35 @@
-import React from 'react';
+import React from 'react'
 
-const Skills = () => {
-  const skillCategories = [
-    {
-      title: 'Frontend',
-      skills: [
-        { name: 'React', level: 90 },
-        { name: 'JavaScript', level: 85 },
-        { name: 'HTML/CSS', level: 95 },
-        { name: 'TypeScript', level: 80 }
-      ]
-    },
-    {
-      title: 'Backend',
-      skills: [
-        { name: 'Node.js', level: 85 },
-        { name: 'Express', level: 80 },
-        { name: 'MongoDB', level: 75 },
-        { name: 'SQL', level: 70 }
-      ]
-    },
-    {
-      title: 'Tools & Others',
-      skills: [
-        { name: 'Git', level: 90 },
-        { name: 'Docker', level: 70 },
-        { name: 'AWS', level: 65 },
-        { name: 'Figma', level: 75 }
-      ]
-    }
-  ];
+export default function Skills(){
+  // Separated topics: Programming Languages, Frameworks, Tools, Databases
+  const list = {
+    languages: ['JavaScript', 'TypeScript', 'Python'],
+    frameworks: ['React', 'Node.js', 'Express'],
+    tools: ['Figma', 'Git', 'Photoshop'],
+    databases: ['PostgreSQL', 'MongoDB']
+  }
 
   return (
-    <section id="skills" className="skills">
-      <div className="container">
-        <h2 className="section-title">Skills & Expertise</h2>
-        <div className="skills-grid">
-          {skillCategories.map((category, index) => (
-            <div key={index} className="skill-category">
-              <h3>{category.title}</h3>
-              <div className="skills-list">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="skill-item">
-                    <div className="skill-info">
-                      <span className="skill-name">{skill.name}</span>
-                      <span className="skill-level">{skill.level}%</span>
-                    </div>
-                    <div className="skill-bar">
-                      <div 
-                        className="skill-progress" 
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+    <div className="skills">
+      <h3>Skills</h3>
+      <div className="skills-grid">
+        <div className="skill-col">
+          <h4>Programming Languages</h4>
+          <ul>{list.languages.map(l=> <li key={l}>{l}</li>)}</ul>
+        </div>
+        <div className="skill-col">
+          <h4>Frameworks</h4>
+          <ul>{list.frameworks.map(l=> <li key={l}>{l}</li>)}</ul>
+        </div>
+        <div className="skill-col">
+          <h4>Tools</h4>
+          <ul>{list.tools.map(l=> <li key={l}>{l}</li>)}</ul>
+        </div>
+        <div className="skill-col">
+          <h4>Databases</h4>
+          <ul>{list.databases.map(l=> <li key={l}>{l}</li>)}</ul>
         </div>
       </div>
-    </section>
-  );
-};
-
-export default Skills;
+    </div>
+  )
+}

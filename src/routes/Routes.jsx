@@ -1,23 +1,23 @@
-import React from 'react';
-import { Routes as RouterRoutes, Route } from 'react-router-dom';
-import Hero from '../components/Hero';
-import About from '../components/About';
-import Skills from '../components/Skills';
-import Projects from '../components/Projects';
-import Education from '../components/Education';
-import Contact from '../components/Contact';
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Hero from '../components/Hero'
+import About from '../components/About'
+import Projects from '../components/Projects'
+import Education from '../components/Education'
+import Contact from '../components/Contact'
 
-const Routes = () => {
+export default function RoutesList(){
   return (
-    <main>
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Education />
-      <Contact />
-    </main>
-  );
-};
+    <Routes>
+      <Route path="/" element={<>
+        <Hero />
+        <About />
+        <Projects />
+      </>} />
 
-export default Routes;
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/education" element={<Education />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
+  )
+}

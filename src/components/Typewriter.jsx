@@ -1,41 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React, {useEffect, useState} from 'react'
 
-const Typewriter = ({ texts, speed = 100, deleteSpeed = 50, delay = 2000 }) => {
-  const [displayText, setDisplayText] = useState('');
-  const [textIndex, setTextIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [charIndex, setCharIndex] = useState(0);
+export default function Typewriter({words=[], speed=80, pause=1500}){
+  const [index, setIndex] = useState(0)
+  const [subIndex, setSubIndex] = useState(0)
+  const [blink, setBlink] = useState(true)
+  const [reverse, setReverse] = useState(false)
 
-  useEffect(() => {
-    const currentText = texts[textIndex];
-    
-    const timer = setTimeout(() => {
-      if (!isDeleting) {
-        if (charIndex < currentText.length) {
-          setDisplayText(currentText.substring(0, charIndex + 1));
-          setCharIndex(charIndex + 1);
-        } else {
-          setTimeout(() => setIsDeleting(true), delay);
-        }
-      } else {
-        if (charIndex > 0) {
-          setDisplayText(currentText.substring(0, charIndex - 1));
-          setCharIndex(charIndex - 1);
-        } else {
-          setIsDeleting(false);
-          setTextIndex((textIndex + 1) % texts.length);
-        }
-      }
-    }, isDeleting ? deleteSpeed : speed);
+  useEffect(()=>{
+    if(index >= words.length) setIndex(0)
 
-    return () => clearTimeout(timer);
-  }, [charIndex, isDeleting, textIndex, texts, speed, deleteSpeed, delay]);
+    const timeout = setTimeout(()=>{
+      setSubIndex(prev => prev + (reverse ? -1 : 1))
+    }, speed)
+
+    return ()=> clearTimeout(timeout)
+  },[subIndex, index, reverse, words, speed])
+
+  useEffect(()=>{
+    if(!reverse && subIndex === words[index].length){
+      setTimeout(()=> setReverse(true), pause)
+    }
+    if(reverse && subIndex === 0){
+      setReverse(false)
+      setIndex(prev => (prev + 1) % words.length)
+    }
+  },[subIndex, reverse, index, words, pause])
+
+  useEffect(()=>{
+    const blinkTimeout = setInterval(()=> setBlink(b => !b), 500)
+    return ()=> clearInterval(blinkTimeout)
+  },[])
 
   return (
-    <div className="typewriter">
-      <h2>{displayText}<span className="cursor">|</span></h2>
-    </div>
-  );
-};
-
-export default Typewriter;
+    <span className="typewriter">
+      {words[index].substring(0, subIndex)}<span className={`cursor ${blink? 'blink':''}`}>|</span>
+    </span>
+  )
+}
