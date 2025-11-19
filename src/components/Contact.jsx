@@ -41,13 +41,13 @@ const [result, setResult] = React.useState("");
         <div className="contact-grid">
           <div className="contact-left">
             <div className="contact-form-wrapper">
-              <form onSubmit={onSubmit}  className="contact-form">
+              <form onSubmit={onSubmit}  className="contact-form" autoComplete="off">
                 <div className="form-row">
-                  <input type="text" name="name" placeholder="Your Name" required />
-                  <input type="email" name="email" placeholder="Your Email" required />
+                  <input type="text" name="name" placeholder="Your Name" autoComplete="off" required />
+                  <input type="email" name="email" placeholder="Your Email" autoComplete="off" required />
                 </div>
-                <input type="text" name="subject" placeholder="Subject" required />
-                <textarea name="message" rows="6" placeholder="Your Message" required />
+                <input type="text" name="subject" placeholder="Subject" autoComplete="off" required />
+                <textarea name="message" rows="6" placeholder="Your Message" autoComplete="off" required />
                 <button type="submit" className="btn btn-accent">
                   {result ? result : "Send Message"}
                 </button>
