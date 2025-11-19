@@ -1,4 +1,5 @@
 import React from "react";
+import { useScrollAnimation } from "../utils/useScrollAnimation";
 import { 
   SiJavascript, 
   SiTypescript, 
@@ -37,15 +38,18 @@ const SkillColumn = ({ title, items }) => (
 );
 
 const Skills = () => {
+  const [titleRef, titleVisible] = useScrollAnimation();
+  const [gridRef, gridVisible] = useScrollAnimation();
+  
   return (
     <section className="section skills-section">
       <div className="container">
-        <h2 className="section-title">Skills & Stack</h2>
-        <p className="section-subtitle">
+        <h2 ref={titleRef} className={`section-title ${titleVisible ? 'animate' : ''}`}>Skills & Stack</h2>
+        <p className={`section-subtitle ${titleVisible ? 'animate' : ''}`}>
           Organized by programming languages, frameworks, tools, and databases.
         </p>
 
-        <div className="skills-grid">
+        <div ref={gridRef} className={`skills-grid ${gridVisible ? 'animate' : ''}`}>
           <SkillColumn
             title="Programming Languages"
             items={[

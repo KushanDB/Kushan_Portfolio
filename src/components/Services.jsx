@@ -1,7 +1,11 @@
 import React from "react";
 import { AiOutlineUser, AiOutlineMobile, AiOutlineCode, AiOutlineBgColors, AiOutlineDatabase, AiOutlineLineChart } from "react-icons/ai";
+import { useScrollAnimation } from "../utils/useScrollAnimation";
 
 const Services = () => {
+  const [titleRef, titleVisible] = useScrollAnimation();
+  const [gridRef, gridVisible] = useScrollAnimation();
+  
   const services = [
     {
       icon: <AiOutlineMobile />,
@@ -38,12 +42,12 @@ const Services = () => {
   return (
     <div className="services-section">
       <div className="container">
-        <h2 className="section-title">Services</h2>
-        <p className="section-subtitle">
+        <h2 ref={titleRef} className={`section-title ${titleVisible ? 'animate' : ''}`}>Services</h2>
+        <p className={`section-subtitle ${titleVisible ? 'animate' : ''}`}>
           Lorem ipsum dolor sit amet consectetur. Imperdiet convallis blandit felis ligula aliquam
         </p>
 
-        <div className="services-grid">
+        <div ref={gridRef} className={`services-grid ${gridVisible ? 'animate' : ''}`}>
           {services.map((service, index) => (
             <div key={index} className="service-card">
               <div className="service-icon">{service.icon}</div>

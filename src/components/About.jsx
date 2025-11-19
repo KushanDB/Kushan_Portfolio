@@ -1,21 +1,26 @@
 import React from "react";
 import heroImg from "../assets/images/canva2.png";
+import { useScrollAnimation } from "../utils/useScrollAnimation";
 
 const About = () => {
+  const [titleRef, titleVisible] = useScrollAnimation();
+  const [imageRef, imageVisible] = useScrollAnimation();
+  const [textRef, textVisible] = useScrollAnimation();
+
   return (
     <section className="section about-section">
       <div className="container">
-        <h2 className="section-title">About Me</h2>
-        <p className="section-subtitle">
+        <h2 ref={titleRef} className={`section-title ${titleVisible ? 'animate' : ''}`}>About Me</h2>
+        <p className={`section-subtitle ${titleVisible ? 'animate' : ''}`}>
           A small introduction about who I am and what I love to build.
         </p>
 
         <div className="about-grid">
-          <div className="about-image-wrapper">
+          <div ref={imageRef} className={`about-image-wrapper ${imageVisible ? 'animate' : ''}`}>
             <img src={heroImg} alt="Kushan Jayathunga" className="about-image" />
           </div>
           
-          <div className="about-text">
+          <div ref={textRef} className={`about-text ${textVisible ? 'animate' : ''}`}>
             <p>
               A software engineer, the modern-day architect of digital realms, 
               navigates the ethereal landscapes of code, sculpting intangible 

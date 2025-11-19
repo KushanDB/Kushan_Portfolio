@@ -1,7 +1,12 @@
 import React from "react";
+import { useScrollAnimation } from "../utils/useScrollAnimation";
+import { toast } from "react-toastify";
 import heroImg from "../assets/images/canva.png";
 
 const Contact = () => {
+  const [titleRef, titleVisible] = useScrollAnimation();
+  const [formRef, formVisible] = useScrollAnimation();
+  const [imageRef, imageVisible] = useScrollAnimation();
 
 const [result, setResult] = React.useState("");
 
@@ -33,13 +38,13 @@ const [result, setResult] = React.useState("");
   return (
     <section className="section contact-section">
       <div className="container">
-        <h2 className="section-title">Contact Me</h2>
-        <p className="section-subtitle">
+        <h2 ref={titleRef} className={`section-title ${titleVisible ? 'animate' : ''}`}>Contact Me</h2>
+        <p className={`section-subtitle ${titleVisible ? 'animate' : ''}`}>
           Let's discuss your next project, collaboration, or idea.
         </p>
 
         <div className="contact-grid">
-          <div className="contact-left">
+          <div ref={formRef} className={`contact-left ${formVisible ? 'animate' : ''}`}>
             <div className="contact-form-wrapper">
               <form onSubmit={onSubmit}  className="contact-form" autoComplete="off">
                 <div className="form-row">
@@ -55,7 +60,7 @@ const [result, setResult] = React.useState("");
             </div>
           </div>
 
-          <div className="contact-right">
+          <div ref={imageRef} className={`contact-right ${imageVisible ? 'animate' : ''}`}>
             <div className="contact-image-wrapper">
               <img
                 src={heroImg}

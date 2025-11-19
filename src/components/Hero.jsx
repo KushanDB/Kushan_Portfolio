@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaGithub, FaLinkedinIn, FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import Typewriter from "./Typewriter";
 import heroImg from "../assets/images/canva.png";
+import { useScrollAnimation } from "../utils/useScrollAnimation";
 
 const Hero = () => {
+  const [leftRef, leftVisible] = useScrollAnimation();
+  const [rightRef, rightVisible] = useScrollAnimation();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // Trigger animation on mount
+    const timer = setTimeout(() => {
+      setMounted(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="hero container">
-      <div className="hero-left">
+      <div ref={leftRef} className={`hero-left ${leftVisible || mounted ? 'animate' : ''}`}>
         <p className="hero-greeting">Hi, I am</p>
         <h1 className="hero-name">Kushan Jayathunga</h1>
 
@@ -76,7 +89,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hero-right">
+      <div ref={rightRef} className={`hero-right ${rightVisible || mounted ? 'animate' : ''}`}>
         <div className="hero-image-wrapper">
           <div className="hero-image-circle" />
           <img src={heroImg} alt="Kushan Jayathunga" className="hero-image" />

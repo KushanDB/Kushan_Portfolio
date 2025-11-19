@@ -1,9 +1,12 @@
 import React from "react";
 import { FaGraduationCap, FaUniversity, FaSchool } from "react-icons/fa";
+import { useScrollAnimation } from "../utils/useScrollAnimation";
 import suslLogo from "../assets/images/SUSL_logo2.png";
 import asmLogo from "../assets/images/ASM_logo.png";
 
 const Education = () => {
+  const [titleRef, titleVisible] = useScrollAnimation();
+  const [timelineRef, timelineVisible] = useScrollAnimation();
   const educationData = [
     {
       year: "2021 - Present",
@@ -37,12 +40,12 @@ const Education = () => {
   return (
     <section className="section education-section">
       <div className="container">
-        <h2 className="section-title">Education</h2>
-        <p className="section-subtitle">
+        <h2 ref={titleRef} className={`section-title ${titleVisible ? 'animate' : ''}`}>Education</h2>
+        <p className={`section-subtitle ${titleVisible ? 'animate' : ''}`}>
           A simple timeline of my academic background.
         </p>
 
-        <div className="education-timeline-wrapper">
+        <div ref={timelineRef} className={`education-timeline-wrapper ${timelineVisible ? 'animate' : ''}`}>
           {educationData.map((edu, index) => (
             <div 
               key={index} 

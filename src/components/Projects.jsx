@@ -1,4 +1,5 @@
 import React from "react";
+import { useScrollAnimation } from "../utils/useScrollAnimation";
 
 // Placeholder image - Replace with your actual project images
 const proj1 = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect fill='%23222' width='600' height='400'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='24' fill='%23666'%3EProject Image%3C/text%3E%3C/svg%3E";
@@ -37,19 +38,22 @@ const projects = [
 ];
 
 const Projects = () => {
+  const [titleRef, titleVisible] = useScrollAnimation();
+  const [gridRef, gridVisible] = useScrollAnimation();
+  
   return (
     <section className="section projects-section">
       <div className="container">
-        <h2 className="section-title">Projects</h2>
+        <h2 ref={titleRef} className={`section-title ${titleVisible ? 'animate' : ''}`}>Projects</h2>
         
-        <p className="section-subtitle">
+        <p className={`section-subtitle ${titleVisible ? 'animate' : ''}`}>
           A selection of work that combines design, code, and creativity.
         </p>
 
         <br />
         <br />
 
-        <div className="projects-grid">
+        <div ref={gridRef} className={`projects-grid ${gridVisible ? 'animate' : ''}`}>
           {projects.map((project, index) => (
             <article key={index} className="project-card">
               <div className="project-image-wrapper">
