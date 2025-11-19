@@ -46,7 +46,6 @@ const [result, setResult] = React.useState("");
                   <input type="text" placeholder="Your Name" required />
                   <input type="email" placeholder="Your Email" required />
                 </div>
-                <input type="text" placeholder="Subject" required />
                 <textarea rows="6" placeholder="Your Message" required />
                 <button type="submit" className="btn btn-accent">
                   {result ? result : "Send Message"}
