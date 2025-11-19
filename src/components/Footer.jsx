@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedinIn, FaFacebookF, FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaFacebookF, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -39,10 +39,14 @@ const Footer = () => {
               <FaEnvelope />
               <span>jayathungadbk4@gmail.com</span>
             </a>
-            <a href="tel:+9476 5746005" className="footer-contact-item">
+            <a href="tel:+94765746005" className="footer-contact-item">
               <FaPhone />
               <span>+94 76 574 6005</span>
             </a>
+            <div className="footer-contact-item">
+              <FaMapMarkerAlt />
+              <span>Colombo, Sri Lanka</span>
+            </div>
           </div>
 
           {/* Divider */}
