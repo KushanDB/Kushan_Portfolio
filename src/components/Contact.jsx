@@ -2,6 +2,34 @@ import React from "react";
 import heroImg from "../assets/images/canva.png";
 
 const Contact = () => {
+
+const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "736b08a7-8250-478c-bf54-ae24d32c3c29");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("");
+      alert("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      alert(data.message);
+      setResult("");
+    }
+  };
+
   return (
     <section className="section contact-section">
       <div className="container">
@@ -13,13 +41,7 @@ const Contact = () => {
         <div className="contact-grid">
           <div className="contact-left">
             <div className="contact-form-wrapper">
-              <form
-                className="contact-form"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  alert("Form submitted (you can connect this to a backend)");
-                }}
-              >
+              <form onSubmit={onSubmit}  className="contact-form">
                 <div className="form-row">
                   <input type="text" placeholder="Your Name" required />
                   <input type="email" placeholder="Your Email" required />
@@ -27,7 +49,7 @@ const Contact = () => {
                 <input type="text" placeholder="Subject" required />
                 <textarea rows="6" placeholder="Your Message" required />
                 <button type="submit" className="btn btn-accent">
-                  Send Message
+                  {result ? result : "Send Message"}
                 </button>
               </form>
             </div>
