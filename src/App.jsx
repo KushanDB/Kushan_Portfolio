@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Loading from "./components/Loading";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -10,9 +13,29 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setLoading(false);
+  };
+
   return (
-    <div className="app">
-      <Navbar />
+    <>
+      {loading && <Loading onLoadingComplete={handleLoadingComplete} />}
+      <div className="app" style={{ opacity: loading ? 0 : 1, transition: 'opacity 0.5s ease-in' }}>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={true}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
+        <Navbar />
       <main>
         <section id="home">
           <Hero />
@@ -43,7 +66,8 @@ const App = () => {
         </section>
       </main>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 
