@@ -43,11 +43,11 @@ const [result, setResult] = React.useState("");
             <div className="contact-form-wrapper">
               <form onSubmit={onSubmit}  className="contact-form">
                 <div className="form-row">
-                  <input type="text" placeholder="Your Name" required />
-                  <input type="email" placeholder="Your Email" required />
+                  <input type="text" name="name" placeholder="Your Name" required />
+                  <input type="email" name="email" placeholder="Your Email" required />
                 </div>
-                <input type="text" placeholder="Subject" required />
-                <textarea rows="6" placeholder="Your Message" required />
+                <input type="text" name="subject" placeholder="Subject" required />
+                <textarea name="message" rows="6" placeholder="Your Message" required />
                 <button type="submit" className="btn btn-accent">
                   {result ? result : "Send Message"}
                 </button>
