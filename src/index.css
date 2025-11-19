@@ -2063,31 +2063,31 @@ img {
 }
 
 .loading-name {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 700;
   margin: 0;
   display: flex;
   flex-direction: row;
-  gap: 0;
-  letter-spacing: 0.1em;
+  gap: 1.5rem;
+  letter-spacing: 0.05em;
+  justify-content: center;
+  align-items: center;
 }
 
 .name-part {
   display: inline-block;
   background: linear-gradient(
     90deg,
-    #6b7280 0%,
-    #9ca3af 25%,
-    #d1d5db 50%,
-    #9ca3af 75%,
-    #6b7280 100%
+    #2a0f12 0%,
+    #1a1a1a 20%,
+    #ff2f3d 60%,
+    #ff4d5a 100%
   );
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shimmer 3s linear infinite, fadeIn 1s ease-in-out;
-  text-shadow: 0 0 30px rgba(107, 114, 128, 0.3);
+  animation: loadingGradient 3s ease-in-out infinite, fadeIn 1s ease-in-out;
 }
 
 .name-part:first-child {
@@ -2095,15 +2095,18 @@ img {
 }
 
 .name-part:last-child {
-  animation-delay: 0.2s;
+  animation-delay: 0.15s;
 }
 
-@keyframes shimmer {
+@keyframes loadingGradient {
   0% {
     background-position: 0% center;
   }
+  50% {
+    background-position: 100% center;
+  }
   100% {
-    background-position: 200% center;
+    background-position: 0% center;
   }
 }
 
@@ -2115,43 +2118,6 @@ img {
   100% {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* Loading dots */
-.loading-dots {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.75rem;
-  margin-top: 2rem;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  background: linear-gradient(135deg, #6b7280, #9ca3af);
-  border-radius: 50%;
-  animation: bounce 1.4s infinite ease-in-out both;
-  box-shadow: 0 0 15px rgba(107, 114, 128, 0.5);
-}
-
-.dot:nth-child(1) {
-  animation-delay: -0.32s;
-}
-
-.dot:nth-child(2) {
-  animation-delay: -0.16s;
-}
-
-@keyframes bounce {
-  0%, 80%, 100% {
-    transform: scale(0.8);
-    opacity: 0.5;
-  }
-  40% {
-    transform: scale(1.2);
-    opacity: 1;
   }
 }
 
@@ -2184,18 +2150,15 @@ img {
 /* Loading responsive design */
 @media (max-width: 768px) {
   .loading-name {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    gap: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .loading-name {
-    font-size: 2rem;
-    letter-spacing: 0.05em;
-  }
-  
-  .dot {
-    width: 10px;
-    height: 10px;
+    font-size: 2.25rem;
+    letter-spacing: 0.03em;
+    gap: 0.75rem;
   }
 }

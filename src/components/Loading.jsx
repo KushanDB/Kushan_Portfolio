@@ -21,14 +21,8 @@ const Loading = ({ onLoadingComplete }) => {
       <div className="loading-content">
         <h1 className="loading-name">
           <span className="name-part">Kushan</span>
-          <span className="name-space"> </span>
           <span className="name-part">Jayathunga</span>
         </h1>
-        <div className="loading-dots">
-          <span className="dot"></span>
-          <span className="dot"></span>
-          <span className="dot"></span>
-        </div>
       </div>
       <div className="loading-line"></div>
     </div>
