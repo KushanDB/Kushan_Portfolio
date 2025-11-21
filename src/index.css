@@ -1206,7 +1206,7 @@ img.loading.loaded {
 .skills-grid {
   margin-top: 3rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 2.5rem;
   align-items: stretch;
 }
@@ -2512,7 +2512,7 @@ img.loading.loaded {
 
   /* Skills Grid */
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
 
@@ -3315,6 +3315,7 @@ img.loading.loaded {
 .skills-grid.animate .skill-column-wrapper:nth-child(2) { animation-delay: 0.4s; }
 .skills-grid.animate .skill-column-wrapper:nth-child(3) { animation-delay: 0.6s; }
 .skills-grid.animate .skill-column-wrapper:nth-child(4) { animation-delay: 0.8s; }
+.skills-grid.animate .skill-column-wrapper:nth-child(5) { animation-delay: 1s; }
 
 @keyframes slideInRotate {
   from {

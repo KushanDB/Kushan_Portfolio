@@ -10,6 +10,9 @@ import {
   SiExpress,
   SiFlutter,
   SiTailwindcss,
+  SiHtml5,
+  SiCss3,
+  SiBootstrap,
   SiGit,
   SiGithub,
   SiFigma,
@@ -72,6 +75,15 @@ const Skills = () => {
             ]}
           />
           <SkillColumn
+            title="Web Technologies"
+            items={[
+              { name: "HTML", icon: <SiHtml5 /> },
+              { name: "CSS", icon: <SiCss3 /> },
+              { name: "Bootstrap", icon: <SiBootstrap /> },
+              { name: "Firebase", icon: <SiFirebase /> }
+            ]}
+          />
+          <SkillColumn
             title="Tools"
             items={[
               { name: "Git", icon: <SiGit /> },
@@ -87,7 +99,7 @@ const Skills = () => {
               { name: "PostgreSQL", icon: <SiPostgresql /> },
               { name: "MongoDB", icon: <SiMongodb /> },
               { name: "MySQL", icon: <SiMysql /> },
-              { name: "Firebase", icon: <SiFirebase /> }
+              { name: "Firestore", icon: <SiFirebase /> }
             ]}
           />
         </div>
