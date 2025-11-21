@@ -8,7 +8,7 @@ import {
   SiReact,
   SiNodedotjs,
   SiExpress,
-  SiNextdotjs,
+  SiFlutter,
   SiTailwindcss,
   SiGit,
   SiGithub,
@@ -67,7 +67,7 @@ const Skills = () => {
               { name: "React", icon: <SiReact /> },
               { name: "Node.js", icon: <SiNodedotjs /> },
               { name: "Express", icon: <SiExpress /> },
-              { name: "Next.js", icon: <SiNextdotjs /> },
+              { name: "Flutter", icon: <SiFlutter /> },
               { name: "Tailwind CSS", icon: <SiTailwindcss /> }
             ]}
           />
