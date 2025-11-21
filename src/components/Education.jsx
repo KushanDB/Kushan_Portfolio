@@ -12,25 +12,25 @@ const Education = () => {
       year: "2021 - Present",
       title: "BSc (Hons) in Computing & Information Systems",
       place: "Sabaragamuwa University of Sri Lanka",
-      description: "Focusing on software engineering, web development, and data-driven systems.",
+      description: "Focusing on software engineering, web development, and UI/UX engineering with a current GPA of 3.58.",
       status: "Undergraduate",
       icon: <FaUniversity />,
       logo: suslLogo
     },
     {
       year: "2018 - 2020",
-      title: "Advanced Level – Combined Mathematics",
-      place: "Your School Name",
-      description: "Strengthened my problem-solving and logical thinking skills through math and physics.",
+      title: "G.C.E Advanced Level - Physical Science Stream",
+      place: "Ananda Sastralaya National School - Mathugama",
+      description: "Passed Examination with \"B\" in Chemistry, \"C\" in Combined Mathematics, and \"C\" in Physics.",
       status: "Completed",
       icon: <FaGraduationCap />,
       logo: asmLogo
     },
     {
       year: "2017",
-      title: "Ordinary Level Examination",
-      place: "Your School Name",
-      description: "Built a strong foundation in ICT, mathematics, and creative subjects.",
+      title: "G.C.E Ordinary Level Examination",
+      place: "Ananda Sastralaya National School - Mathugama",
+      description: "Passed G.C.E. Ordinary Level with \"7A\" passes and \"2C\" passes including Mathematics and Science.",
       status: "Completed",
       icon: <FaSchool />,
       logo: asmLogo
