@@ -17,7 +17,7 @@ const projects = [
     image: sportCenter,
     technologies: ["PHP", "Laravel", "MySQL", "Bootstrap"],
     description: "A web-based Sports Center Management System built to handle equipment borrowing, fine tracking, and inventory management efficiently.",
-    github: "https://github.com/your-username/sport-center"
+    github: "https://github.com/IndWit/sport-center-inventory-management"
   },
   {
     title: "MindLink",
@@ -25,7 +25,7 @@ const projects = [
     image: mindLink,
     technologies: ["Flutter", "Firebase", "Figma"],
     description: "MindLink is an AI-powered quiz app that creates interactive quizzes from study materials and tracks user performance in real time.",
-    github: "https://github.com/your-username/mindlink"
+    github: "https://github.com/Sachindu-Nethmin/Mind-Link"
   },
   {
     title: "Kolonna Store Track",
@@ -41,7 +41,7 @@ const projects = [
     image: trendHive,
     technologies: ["React.js", "Express.js", "MongoDB", "Node.js"],
     description: "Trend Hive is a full-stack eCommerce website where users can browse products, manage carts, and place orders, with an admin dashboard.",
-    github: "https://github.com/your-username/trendhive"
+    github: "https://github.com/KushanDB/TrendHive-Ecommerce"
   },
   {
     title: "Travel",
@@ -49,7 +49,7 @@ const projects = [
     image: travel,
     technologies: ["HTML", "CSS", "JavaScript"],
     description: "Travel is a simple website built with HTML, CSS, and JavaScript that showcases popular tourist destinations through an interactive image slideshow.",
-    github: "https://github.com/your-username/travel"
+    github: "https://github.com/KushanDB/Country-Website"
   },
   {
     title: "Livora",
@@ -57,7 +57,7 @@ const projects = [
     image: livora,
     technologies: ["React.js", "Tailwind CSS"],
     description: "Livora is a responsive real estate website that showcases property listings and offers an easy platform for users to explore and connect with developers.",
-    github: "https://github.com/your-username/livora"
+    github: "https://github.com/KushanDB/Livora--Real-Estate-Website"
   },
 ];
 
