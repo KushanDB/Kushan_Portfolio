@@ -2712,9 +2712,21 @@ img.loading.loaded {
     text-align: left;
   }
 
+  .about-text {
+    text-align: center;
+  }
+
   .about-text .btn {
     margin-top: 1.5rem;
-    width: 100%;
+    width: auto;
+    display: inline-flex;
+  }
+
+  .btn-accent {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    justify-content: center;
+    white-space: nowrap;
   }
 
   /* Services Grid */
