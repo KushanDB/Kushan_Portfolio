@@ -22,13 +22,13 @@ const Footer = () => {
 
           {/* Social Icons */}
           <div className="footer-social">
-            <a href="https://github.com/your-username" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <a href="https://github.com/KushanDB" target="_blank" rel="noreferrer" aria-label="GitHub">
               <FaGithub />
             </a>
-            <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/kushan-jayathunga-665969302?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BNfhfO%2FOcTQG4IMnlpiOELw%3D%3D" target="_blank" rel="noreferrer" aria-label="LinkedIn">
               <FaLinkedinIn />
             </a>
-            <a href="https://facebook.com/your-profile" target="_blank" rel="noreferrer" aria-label="Facebook">
+            <a href="https://www.facebook.com/bimsara.kushan" target="_blank" rel="noreferrer" aria-label="Facebook">
               <FaFacebookF />
             </a>
           </div>

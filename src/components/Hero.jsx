@@ -30,37 +30,6 @@ const Hero = () => {
           />
         </h2>
 
-        <div className="hero-social">
-          <a
-            href="https://github.com/KushanDB"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaGithub />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/kushan-jayathunga-665969302?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BNfhfO%2FOcTQG4IMnlpiOELw%3D%3D"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaLinkedinIn />
-          </a>
-          <a
-            href="https://www.facebook.com/bimsara.kushan"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaFacebookF />
-          </a>
-          <a
-            href="https://wa.me/94700000000"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaWhatsapp />
-          </a>
-        </div>
-
         <div className="hero-actions">
           <a href="#contact" className="btn btn-accent">
             Hire Me
