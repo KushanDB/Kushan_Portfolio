@@ -1517,6 +1517,15 @@ img.loading.loaded {
   margin: 0 0 0.5rem 0;
 }
 
+.gpa-highlight {
+  color: #d1d5db;
+  font-weight: 700;
+  font-size: 0.95rem;
+  background: rgba(209, 213, 219, 0.1);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
 .edu-status {
   display: inline-block;
   font-size: 0.7rem;

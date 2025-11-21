@@ -12,7 +12,11 @@ const Education = () => {
       year: "2021 - Present",
       title: "BSc (Hons) in Computing & Information Systems",
       place: "Sabaragamuwa University of Sri Lanka",
-      description: "Focusing on software engineering, web development, and UI/UX engineering with a current GPA of 3.58.",
+      description: (
+        <>
+          Focusing on software engineering, web development, and UI/UX engineering with a current GPA of <span className="gpa-highlight">3.58</span>.
+        </>
+      ),
       status: "Undergraduate",
       icon: <FaUniversity />,
       logo: suslLogo
