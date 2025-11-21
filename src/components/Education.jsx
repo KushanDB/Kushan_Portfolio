@@ -9,7 +9,7 @@ const Education = () => {
   const [timelineRef, timelineVisible] = useScrollAnimation();
   const educationData = [
     {
-      year: "2021 - Present",
+      year: "2023 - Present",
       title: "BSc (Hons) in Computing & Information Systems",
       place: "Sabaragamuwa University of Sri Lanka",
       description: (
@@ -22,7 +22,7 @@ const Education = () => {
       logo: suslLogo
     },
     {
-      year: "2018 - 2020",
+      year: "2017 - 2019",
       title: "G.C.E Advanced Level - Physical Science Stream",
       place: "Ananda Sastralaya National School - Mathugama",
       description: "Passed Examination with \"B\" in Chemistry, \"C\" in Combined Mathematics, and \"C\" in Physics.",
@@ -31,7 +31,7 @@ const Education = () => {
       logo: asmLogo
     },
     {
-      year: "2017",
+      year: "2016",
       title: "G.C.E Ordinary Level Examination",
       place: "Ananda Sastralaya National School - Mathugama",
       description: "Passed G.C.E. Ordinary Level with \"7A\" passes and \"2C\" passes including Mathematics and Science.",
