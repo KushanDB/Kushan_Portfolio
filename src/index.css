@@ -1808,10 +1808,10 @@ img.loading.loaded {
 }
 
 .project-github-btn:hover {
-  background: rgba(156, 163, 175, 0.1);
-  border-color: var(--text-light);
+  background: rgba(255, 47, 61, 0.08);
+  border-color: rgba(255, 47, 61, 0.4);
   color: var(--text-light);
-  box-shadow: 0 0 15px rgba(156, 163, 175, 0.3);
+  box-shadow: 0 0 15px rgba(255, 47, 61, 0.2);
   transform: translateY(-2px);
 }
 
