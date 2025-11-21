@@ -2,8 +2,9 @@ import React from "react";
 import { useScrollAnimation } from "../utils/useScrollAnimation";
 import { 
   SiJavascript, 
-  SiTypescript, 
   SiPython,
+  SiDart,
+  SiC,
   SiReact,
   SiNodedotjs,
   SiExpress,
@@ -54,8 +55,9 @@ const Skills = () => {
             title="Programming Languages"
             items={[
               { name: "JavaScript", icon: <SiJavascript /> },
-              { name: "TypeScript", icon: <SiTypescript /> },
               { name: "Python", icon: <SiPython /> },
+              { name: "Dart", icon: <SiDart /> },
+              { name: "C", icon: <SiC /> },
               { name: "Java", icon: <FaJava /> }
             ]}
           />
