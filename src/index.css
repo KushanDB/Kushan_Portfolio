@@ -510,6 +510,9 @@ img.loading.loaded {
   padding: 0.65rem 1.8rem;
   font-size: 0.95rem;
   transition: background 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .btn-accent:hover {
@@ -1613,32 +1616,13 @@ img.loading.loaded {
 .project-card {
   background: rgba(30, 30, 30, 0.5);
   border-radius: var(--radius-lg);
-  border: 2px solid rgba(255, 47, 61, 0.3);
+  border: none;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 
-    0 6px 20px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(255, 255, 255, 0.05),
-    0 0 20px rgba(255, 47, 61, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   position: relative;
-  animation: projectGlow 3s ease-in-out infinite;
-}
-
-@keyframes projectGlow {
-  0%, 100% {
-    box-shadow: 
-      0 6px 20px rgba(0, 0, 0, 0.4),
-      0 0 0 1px rgba(255, 255, 255, 0.05),
-      0 0 20px rgba(255, 47, 61, 0.1);
-  }
-  50% {
-    box-shadow: 
-      0 6px 20px rgba(0, 0, 0, 0.4),
-      0 0 0 1px rgba(255, 255, 255, 0.05),
-      0 0 25px rgba(255, 47, 61, 0.25);
-  }
 }
 
 .project-card::before {
@@ -1648,22 +1632,16 @@ img.loading.loaded {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 47, 61, 0.08), transparent);
+  background: linear-gradient(135deg, rgba(255, 47, 61, 0.05), transparent);
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.3s ease;
   z-index: 0;
   pointer-events: none;
 }
 
 .project-card:hover {
-  transform: translateY(-12px) scale(1.02);
-  border-color: rgba(255, 47, 61, 0.6);
-  box-shadow: 
-    0 15px 40px rgba(0, 0, 0, 0.6),
-    0 0 0 1px rgba(255, 255, 255, 0.1),
-    0 0 40px rgba(255, 47, 61, 0.4),
-    inset 0 0 20px rgba(255, 47, 61, 0.1);
-  animation: none;
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 .project-card:hover::before {
@@ -1819,21 +1797,21 @@ img.loading.loaded {
   padding: 0.6rem 1.2rem;
   margin-top: 1rem;
   background: transparent;
-  border: 2px solid rgba(255, 47, 61, 0.4);
+  border: 2px solid var(--text-muted);
   border-radius: 8px;
   color: var(--text-light);
   font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(255, 47, 61, 0.2);
+  box-shadow: none;
 }
 
 .project-github-btn:hover {
-  background: rgba(255, 47, 61, 0.1);
-  border-color: #ff2f3d;
-  color: #ff2f3d;
-  box-shadow: 0 0 20px rgba(255, 47, 61, 0.4);
+  background: rgba(156, 163, 175, 0.1);
+  border-color: var(--text-light);
+  color: var(--text-light);
+  box-shadow: 0 0 15px rgba(156, 163, 175, 0.3);
   transform: translateY(-2px);
 }
 

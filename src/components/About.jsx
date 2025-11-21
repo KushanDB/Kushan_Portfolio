@@ -1,4 +1,5 @@
 import React from "react";
+import { FaDownload } from "react-icons/fa";
 import heroImg from "../assets/images/canva2.png";
 import CV from "../assets/CV.pdf";
 import { useScrollAnimation } from "../utils/useScrollAnimation";
@@ -36,7 +37,7 @@ const About = () => {
             </p>
             
             <a href={CV} className="btn btn-accent" download="Kushan-Jayathunga-CV.pdf">
-              Download CV
+              <FaDownload /> Download CV
             </a>
           </div>
         </div>
