@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { FaGithub } from "react-icons/fa";
 import { useScrollAnimation } from "../utils/useScrollAnimation";
 
 // Project images
@@ -15,42 +16,48 @@ const projects = [
     category: "Group Project",
     image: sportCenter,
     technologies: ["PHP", "Laravel", "MySQL", "Bootstrap"],
-    description: "A web-based Sports Center Management System built to handle equipment borrowing, fine tracking, and inventory management efficiently."
+    description: "A web-based Sports Center Management System built to handle equipment borrowing, fine tracking, and inventory management efficiently.",
+    github: "https://github.com/your-username/sport-center"
   },
   {
     title: "MindLink",
     category: "Group Project",
     image: mindLink,
     technologies: ["Flutter", "Firebase", "Figma"],
-    description: "MindLink is an AI-powered quiz app that creates interactive quizzes from study materials and tracks user performance in real time."
+    description: "MindLink is an AI-powered quiz app that creates interactive quizzes from study materials and tracks user performance in real time.",
+    github: "https://github.com/your-username/mindlink"
   },
   {
     title: "Kolonna Store Track",
     category: "Community Project",
     image: kolonnaStore,
     technologies: ["MongoDB", "Express.js", "React.js", "Node.js"],
-    description: "A web-based Store Management System developed for the Kolonna Divisional Secretariat to automate operations and manage inventory efficiently."
+    description: "A web-based Store Management System developed for the Kolonna Divisional Secretariat to automate operations and manage inventory efficiently.",
+    github: "https://github.com/your-username/kolonna-store-track"
   },
   {
     title: "TrendHive",
     category: "Individual Project",
     image: trendHive,
     technologies: ["React.js", "Express.js", "MongoDB", "Node.js"],
-    description: "Trend Hive is a full-stack eCommerce website where users can browse products, manage carts, and place orders, with an admin dashboard."
+    description: "Trend Hive is a full-stack eCommerce website where users can browse products, manage carts, and place orders, with an admin dashboard.",
+    github: "https://github.com/your-username/trendhive"
   },
   {
     title: "Travel",
     category: "Individual Project",
     image: travel,
     technologies: ["HTML", "CSS", "JavaScript"],
-    description: "Travel is a simple website built with HTML, CSS, and JavaScript that showcases popular tourist destinations through an interactive image slideshow."
+    description: "Travel is a simple website built with HTML, CSS, and JavaScript that showcases popular tourist destinations through an interactive image slideshow.",
+    github: "https://github.com/your-username/travel"
   },
   {
     title: "Livora",
     category: "Individual Project",
     image: livora,
     technologies: ["React.js", "Tailwind CSS"],
-    description: "Livora is a responsive real estate website that showcases property listings and offers an easy platform for users to explore and connect with developers."
+    description: "Livora is a responsive real estate website that showcases property listings and offers an easy platform for users to explore and connect with developers.",
+    github: "https://github.com/your-username/livora"
   },
 ];
 
@@ -106,6 +113,14 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
+                <a 
+                  href={project.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="project-github-btn"
+                >
+                  <FaGithub /> View on GitHub
+                </a>
               </div>
             </article>
           ))}
