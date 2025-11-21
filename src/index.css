@@ -1235,7 +1235,7 @@ img.loading.loaded {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 380px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
@@ -2588,6 +2588,14 @@ img.loading.loaded {
 
   .footer-contact-item {
     font-size: 0.9rem;
+  }
+}
+
+/* Medium tablets and small laptops */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
 
