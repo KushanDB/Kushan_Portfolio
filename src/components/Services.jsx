@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineUser, AiOutlineMobile, AiOutlineCode, AiOutlineBgColors, AiOutlineDatabase, AiOutlineLineChart } from "react-icons/ai";
+import { AiOutlineUser, AiOutlineMobile, AiOutlineCode, AiOutlineBgColors, AiOutlineDatabase, AiOutlineLineChart, AiOutlineDesktop, AiOutlineLayout } from "react-icons/ai";
 import { useScrollAnimation } from "../utils/useScrollAnimation";
 
 const Services = () => {
@@ -28,12 +28,12 @@ const Services = () => {
       description: "Developing robust server-side solutions, RESTful APIs, and database architectures to power scalable and secure web applications."
     },
     {
-      icon: <AiOutlineUser />,
+      icon: <AiOutlineDesktop />,
       title: "Frontend Development",
       description: "Creating dynamic and responsive user interfaces using modern JavaScript frameworks and libraries to deliver seamless user experiences."
     },
     {
-      icon: <AiOutlineLineChart />,
+      icon: <AiOutlineLayout />,
       title: "Landing Page Design",
       description: "Crafting visually appealing and conversion-focused landing pages that effectively communicate your message and drive user engagement."
     }
