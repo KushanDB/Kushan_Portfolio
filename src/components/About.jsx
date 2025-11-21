@@ -1,5 +1,6 @@
 import React from "react";
 import heroImg from "../assets/images/canva2.png";
+import CV from "../assets/CV.pdf";
 import { useScrollAnimation } from "../utils/useScrollAnimation";
 
 const About = () => {
@@ -22,26 +23,19 @@ const About = () => {
           
           <div ref={textRef} className={`about-text ${textVisible ? 'animate' : ''}`}>
             <p>
-              A software engineer, the modern-day architect of digital realms, 
-              navigates the ethereal landscapes of code, sculpting intangible 
-              structures that shape our technological world. With fingers poised over 
-              keyboards like virtuoso pianists, they compose symphonies of logic, 
-              their minds a labyrinth of algorithms and solutions.
+              I'm a passionate software engineer who loves building digital solutions that make a difference. 
+              With expertise in full-stack development, I transform ideas into elegant, functional applications.
             </p>
             <p>
-              Their canvas is a screen, a vast expanse where lines of code dance in 
-              intricate patterns, weaving the fabric of programs and applications. Each 
-              keystroke is a brushstroke, crafting intricate architectures and breathing 
-              life into innovative designs.
+              My journey in tech is driven by curiosity and problem-solving. I specialize in creating 
+              responsive web applications using modern technologies like React, Node.js, and various databases.
             </p>
             <p>
-              In this digital atelier, they don the mantle of problem solvers, confronting 
-              bugs and glitches like valiant knights in an ever-evolving quest for perfection. 
-              Debugging becomes a noble pursuit, unraveling the mysteries hidden within the 
-              tangled webs of code designs in this digital atelier.
+              Whether it's crafting intuitive user interfaces or architecting robust backend systems, 
+              I'm committed to writing clean, maintainable code that delivers exceptional user experiences.
             </p>
             
-            <a href="/Kushan-Jayathunga-CV.pdf" className="btn btn-accent" download>
+            <a href={CV} className="btn btn-accent" download="Kushan-Jayathunga-CV.pdf">
               Download CV
             </a>
           </div>

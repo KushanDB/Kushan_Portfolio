@@ -28,7 +28,7 @@ const SkillColumn = ({ title, items }) => (
       <ul className="skill-list">
         {items.map((item) => (
           <li key={item.name} className="skill-item">
-            <span className="skill-icon">{item.icon}</span>
+            <span className="skill-icon" title={item.name}>{item.icon}</span>
             <span className="skill-name">{item.name}</span>
           </li>
         ))}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaGithub, FaLinkedinIn, FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import Typewriter from "./Typewriter";
 import heroImg from "../assets/images/canva.png";
+import CV from "../assets/CV.pdf";
 import { useScrollAnimation } from "../utils/useScrollAnimation";
 
 const Hero = () => {
@@ -65,9 +66,9 @@ const Hero = () => {
             Hire Me
           </a>
           <a
-            href="/Kushan-Jayathunga-CV.pdf"
+            href={CV}
             className="btn btn-outline"
-            download
+            download="Kushan-Jayathunga-CV.pdf"
           >
             Download CV
           </a>
