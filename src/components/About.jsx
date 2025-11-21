@@ -24,16 +24,15 @@ const About = () => {
           
           <div ref={textRef} className={`about-text ${textVisible ? 'animate' : ''}`}>
             <p>
-              I'm a passionate software engineer who loves building digital solutions that make a difference. 
-              With expertise in full-stack development, I transform ideas into elegant, functional applications.
+              I'm a motivated and passionate Full-Stack Developer and UI/UX Designer with a strong focus on building modern, 
+              user-friendly web applications. I specialize in crafting intuitive interfaces and scalable backend solutions, bridging the gap between design and functionality to deliver seamless digital experiences.
             </p>
             <p>
-              My journey in tech is driven by curiosity and problem-solving. I specialize in creating 
-              responsive web applications using modern technologies like React, Node.js, and various databases.
+              With a solid foundation in software engineering, web development, and UI/UX design, I thrive on turning ideas into impactful products. 
+              My journey in technology has equipped me with the skills to manage projects from concept to deployment while continuously learning and adapting to emerging tools and techniques.
             </p>
             <p>
-              Whether it's crafting intuitive user interfaces or architecting robust backend systems, 
-              I'm committed to writing clean, maintainable code that delivers exceptional user experiences.
+              Driven by curiosity, creativity, and innovation, I aim to contribute to dynamic teams, collaborate effectively, and create meaningful solutions that make a real difference.
             </p>
             
             <a href={CV} className="btn btn-accent" download="Kushan-Jayathunga-CV.pdf">
